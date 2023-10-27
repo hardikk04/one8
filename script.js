@@ -38,4 +38,116 @@ function loco() {
   ScrollTrigger.refresh();
 }
 
-loco();
+// loco();
+
+var t1 = gsap.timeline();
+
+t1.to(".page2", {
+  right: "0%",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page1  ",
+    start: "top top",
+    end: "top -100%",
+    scrub: 1,
+    // markers: true,
+    pin: true,
+    pinSpacing: false,
+  },
+});
+
+t1.to(".page2-text> h1", {
+  fontSize: "11vw",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page2",
+    start: "top top",
+    end: "top -30%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".page2", {
+  backgroundColor: "#000",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page2",
+    start: "top -50%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".page2,.page2-text > .first", {
+  opacity: 1,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page2",
+    start: "top -60%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".page2-text > .second", {
+  opacity: 1,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page2",
+    start: "top -70%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".page2-img", {
+  opacity: 1,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page2",
+    start: "top -90%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".page3", {
+  opacity: 1,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page3",
+    start: "top 100%",
+    scrub: 1,
+    // markers: true,
+    pin: true,
+    pinSpacing: false,
+  },
+});
+
+t1.from(".page4-box", {
+  y: 100,
+  opacity: 0,
+  duration: 0.5,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page4-box",
+    start: "top 80%",
+    end: "top 70%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".page5>img", {
+  // opacity: 0,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page5",
+    start: "top 0%",
+    scrub: 1,
+    // markers: true,
+    // pin: true,
+    // pinSpacing: false,
+  },
+});
